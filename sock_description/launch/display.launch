@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find sock_description)/urdf/sock.xacro"/>
+  <arg name="gui" default="False"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+  <!-- Send fake joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Load differential drive controller --> 
+  <rosparam file="$(find sock_description)/config/diff_drive_controller.yaml" command="load"/>
+  <node name="sock_controller_manager" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="sock_wheel_controller"/>
+  <!-- Show in RViZ -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sock_description)/rviz/sock.rviz" required="true"/>
+</launch>
