@@ -175,7 +175,7 @@
 
 	<!-- Depth camera details, source: https://answers.ros.org/question/301164/adding-a-3d-camera-to-a-robot-armur5-in-urdf-for-rviz-and-gazebo/-->
 	<gazebo reference="camera_link">
-		<sensor type="depth" name="sock">
+		<sensor type="depth" name="elenb">
 			<always_on>true</always_on>
 			<visualize>true</visualize>
 			<camera>
@@ -197,7 +197,7 @@
 				<baseline>0.2</baseline>
 				<alwaysOn>true</alwaysOn>
 				<updateRate>10.0</updateRate>
-				<cameraName>sock</cameraName>
+				<cameraName>elenb</cameraName>
 				<frameName>camera_depth_link</frameName> <!--extra link made for the depth camera -->
 				<imageTopicName>rgb/image_raw</imageTopicName>
 				<depthImageTopicName>depth/image_raw</depthImageTopicName>
@@ -259,7 +259,7 @@
   </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
-	      <topicName>/sock/laser/scan</topicName>
+	      <topicName>/elenb/laser/scan</topicName>
 	      <frameName>lidar_link</frameName>
       </plugin>
     </sensor>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Copied from "husky_navigation" package -->
+<launch>
+  <!-- Run gmapping -->
+  <include file="$(find sock_2dnav)/launch/gmapping.launch"/>
+
+  <!-- Run Move Base --> 
+  <include file="$(find sock_2dnav)/launch/move_base.launch"/>
+</launch>
+
