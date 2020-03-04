@@ -2,7 +2,7 @@
 <launch> 
   <arg name="model" default="$(find sock_description)/urdf/sock.xacro"/>
 
-  <!-- Using standard gazebo launch file -->
+  <!-- Launching willowgarage with gazebo model -->
   <include file="$(find sock_gazebo)/launch/gazebo.launch"> 
     <arg name="model" value="$(arg model)"/>
   </include>
