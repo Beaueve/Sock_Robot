@@ -13,10 +13,10 @@
 	</material>
 	<link name="base_link">
 		<visual>
-			<geometry>
-				<box size="${length} ${width} ${height}"/>
+      <geometry>
+        <mesh filename="package://sock_description/meshes/sock7.dae"/>
 			</geometry>
-			<origin rpy="0 0 0" xyz="0 0 0.032"/>
+			<origin rpy="0 0 1.57075" xyz="0 0 0.0"/>
 			<material name="color1"/>
 		</visual>
 		<collision>
@@ -38,7 +38,7 @@
 	<link name="left_wheel">
 		<visual>
 			<geometry>
-				<cylinder length="0.018" radius="0.026"/>
+				<cylinder length="0.001" radius="0.001"/>
 			</geometry>
 			<origin rpy="1.57075 0 0" xyz="0 0.0495 0.0"/>
 			<material name="color2"/>
@@ -64,7 +64,7 @@
 	<link name="right_wheel">
 		<visual>
 			<geometry>
-				<cylinder length="0.018" radius="0.026"/>
+				<cylinder length="0.00018" radius="0.00026"/>
 			</geometry>
 			<origin rpy="1.57075 0 0" xyz="0 -0.0495 0.0"/>
 			<material name="color2"/>
@@ -88,7 +88,7 @@
 	<link name="front_ball">
 		<visual>
 			<geometry>
-				<sphere radius="0.026"/>
+				<sphere radius="0.00026"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0.0605 0 0.0261"/>
 			<material name="color1"/>
@@ -109,7 +109,7 @@
 	<link name="back_ball">
 		<visual>
 			<geometry>
-				<sphere radius="0.026"/>
+				<sphere radius="0.00026"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="-0.0605 0 0.0261"/>
 			<material name="color1"/>
