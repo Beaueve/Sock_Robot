@@ -44,6 +44,15 @@ roslaunch sock_gazebo sock_gazebo.launch
 ```
 roslaunch sock_2dnav sock_2damcl.launch
 ```
+## Dependencies
+```
+sudo apt-get install libsdl-dev
+sudo apt-get install libsdl-image1.2-dev
+```
+
+https://github.com/ros-planning/navigation_msgs
+https://github.com/ros-planning/navigation
+https://github.com/ros/geometry2
 
 ## note
 
