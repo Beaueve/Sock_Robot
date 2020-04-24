@@ -50,9 +50,12 @@ sudo apt-get install libsdl-dev
 sudo apt-get install libsdl-image1.2-dev
 ```
 
-https://github.com/ros-planning/navigation_msgs
-https://github.com/ros-planning/navigation
-https://github.com/ros/geometry2
+1. https://github.com/ros-planning/navigation_msgs
+
+2. https://github.com/ros-planning/navigation
+
+3. https://github.com/ros/geometry2
+
 
 ## note
 
